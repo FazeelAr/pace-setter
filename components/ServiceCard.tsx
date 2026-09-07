@@ -1,7 +1,6 @@
 'use client';
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface ServiceCardProps {
@@ -13,15 +12,11 @@ interface ServiceCardProps {
   image?: string;
 }
 
-export default function ServiceCard({ title, description, icon, index = 0, image, priority = false }: ServiceCardProps) {
+export default function ServiceCard({ title, description, icon, image, priority = false }: ServiceCardProps) {
   return (
     <Link href="/contact">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full cursor-pointer"
+      <div 
+        className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 flex flex-col h-full cursor-pointer"
       >
         <div className="relative h-40 md:h-48 overflow-hidden">
           <Image src={image || "/service_bg.png"} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" priority={priority} loading={priority ? "eager" : "lazy"} />
@@ -54,7 +49,7 @@ export default function ServiceCard({ title, description, icon, index = 0, image
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </Link>
   );
 }
