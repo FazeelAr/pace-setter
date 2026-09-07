@@ -8,51 +8,39 @@ import Link from 'next/link';
 const steps = [
   {
     number: 1,
-    title: "Select Your Program",
-    description: "Explore thousands of programs across 65+ countries. Our experts help you find the perfect match for your academic goals and career aspirations.",
+    title: "Select Program",
+    description: "Choose a program aligned with your academic goals and career plans.",
     icon: "🎓"
   },
   {
     number: 2,
-    title: "Submit Application",
-    description: "We guide you through the entire application process with documentation, essays, and recommendation letters tailored to each university.",
-    icon: "📝"
+    title: "Select University",
+    description: "Shortlist the right university based on your profile, budget, and ambitions.",
+    icon: "🏫"
   },
   {
     number: 3,
-    title: "Receive Offer Letter",
-    description: "Get accepted to your dream universities. We work with you to compare offers and select the best opportunity for your future.",
-    icon: "✉️"
+    title: "Select Destination",
+    description: "Compare destinations and find the country that fits your future best.",
+    icon: "🌍"
   },
   {
     number: 4,
-    title: "Fulfill Conditions",
-    description: "Meet any conditional requirements like language proficiency tests or additional documentation with our comprehensive support.",
-    icon: "✅"
+    title: "Submit Application",
+    description: "Prepare and submit a complete application with guidance from our team.",
+    icon: "📝"
   },
   {
     number: 5,
-    title: "Pay Tuition Deposit",
-    description: "We assist with payment processing and financial planning, including scholarship and funding opportunities discussion.",
-    icon: "💳"
+    title: "Document Collection",
+    description: "Gather and organize the documents required for your application process.",
+    icon: "📄"
   },
   {
     number: 6,
-    title: "Get Unconditional Offer",
-    description: "Secure your unconditional admission with all conditions met. Your acceptance is now confirmed and finalized.",
-    icon: "🎉"
-  },
-  {
-    number: 7,
-    title: "Apply For Visa",
-    description: "Expert visa guidance for UK, USA, Canada, Australia, and 60+ destinations. We handle documentation and interview preparation.",
-    icon: "🛂"
-  },
-  {
-    number: 8,
-    title: "Start Your Program",
-    description: "Begin your international education journey! Pre-arrival support, accommodation help, and ongoing mentorship throughout your studies.",
-    icon: "🚀"
+    title: "Receive Offer Letter",
+    description: "Move closer to your goal with support reviewing your university offer.",
+    icon: "✉️"
   }
 ];
 
@@ -120,7 +108,7 @@ export default function HowItWorks() {
             className="text-center mb-16"
           >
             <span className="text-accent font-black tracking-[0.2em] uppercase border-l-4 border-accent pl-4 text-xs inline-block">The Process</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-4 leading-tight">8 Simple Steps to Your Dream University</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-4 leading-tight">Six Simple Steps to Your Dream University</h2>
             <p className="text-slate-600 mt-4 text-sm md:text-base max-w-2xl mx-auto">
               Follow our proven process designed by experts with 22+ years of international education experience.
             </p>
@@ -131,7 +119,7 @@ export default function HowItWorks() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {steps.map((step, index) => (
               <motion.div
@@ -140,10 +128,10 @@ export default function HowItWorks() {
                 className="relative"
               >
                 {/* Connector Line */}
-                {index < steps.length - 1 && index % 4 !== 3 && (
+                {index < steps.length - 1 && index % 3 !== 2 && (
                   <div className="hidden lg:block absolute top-24 -right-3 w-6 h-1 bg-gradient-to-r from-accent to-accent/30"></div>
                 )}
-                {index < steps.length - 1 && index % 4 === 3 && (
+                {index < steps.length - 1 && index % 3 === 2 && (
                   <div className="hidden lg:block absolute -bottom-16 left-1/2 w-1 h-16 bg-gradient-to-b from-accent to-accent/30 -translate-x-1/2"></div>
                 )}
 
@@ -204,12 +192,9 @@ export default function HowItWorks() {
               <div className="hidden md:block absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-accent/50 to-accent/30"></div>
 
               {[
-                { duration: "Months 1-2", title: "Program Selection & Planning", desc: "Research universities, shortlist programs, and plan your application strategy." },
-                { duration: "Months 2-4", title: "Application Submission", desc: "Complete applications, submit documents, and await acceptance responses." },
-                { duration: "Months 4-5", title: "Offers & Conditions", desc: "Receive conditional offers and work on fulfilling any outstanding requirements." },
-                { duration: "Months 5-6", title: "Financial Arrangements", desc: "Pay deposits and finalize scholarship/funding arrangements." },
-                { duration: "Months 6-8", title: "Visa Application", desc: "Prepare visa documents and submit applications to relevant embassies." },
-                { duration: "Month 8-9", title: "Visa Approval", desc: "Receive visa approval and complete final pre-departure arrangements." },
+                { duration: "Weeks 1-2", title: "Program, University & Destination", desc: "Select the right program, university, and destination with expert guidance." },
+                { duration: "Weeks 2-6", title: "Application & Documents", desc: "Submit your application and collect the documents required for review." },
+                { duration: "Weeks 6-12", title: "Offer Letter & Next Steps", desc: "Receive your offer letter and prepare confidently for the next stage." },
               ].map((item, index) => (
                 <motion.div
                   key={index}
