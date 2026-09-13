@@ -98,7 +98,7 @@ export default function Footer() {
           <ul className="space-y-4 text-white/90 font-medium text-sm">
             <li className="flex gap-3">
               <MapPin className="text-accent shrink-0" size={18} />
-              <span className="leading-relaxed opacity-90">Office 702 2nd Floor Ashrafi Heights Main Market Gulberg 2 Lahore</span>
+              <span className="leading-relaxed opacity-90">Office 702 7th Floor Ashrafi Heights Main Market Gulberg 2 Lahore</span>
             </li>
             <li className="flex gap-3 items-center group">
               <Phone className="text-accent shrink-0" size={18} />
