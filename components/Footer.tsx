@@ -53,7 +53,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-3">
             {[
-              { icon: <FacebookIcon />, href: "https://www.facebook.com/share/1TwruuvQF4/" },
+              { icon: <FacebookIcon />, href: "https://www.facebook.com/profile.php?id=61592297006465" },
               { icon: <TwitterIcon />, href: "#" },
               { icon: <LinkedinIcon />, href: "#" },
               { icon: <InstagramIcon />, href: "#" }
